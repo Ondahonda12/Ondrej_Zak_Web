@@ -1,28 +1,131 @@
 #root {
-
   height: 100%;
   margin: 0;
   text-align: center;
 }
+
 .app-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #001a33;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.zivotopis-section {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  padding: 40px 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  color:white
+}
+
+.zivotopis-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  text-align: left;
+  padding-left: 10rem;
+}
+
+.zivotopis-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.zivotopis-image img {
+  max-width: 50rem;
+  max-height: 50rem;
+  padding-top: 3rem;
+
+}
+
+#zivotopis h1 {
+  font-size: 36px;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+#zivotopis h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#zivotopis ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+#zivotopis li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+#zivotopis p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#contact {
+  padding: 2rem;
+}
+
+#contact h1 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#contact a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: show; 
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+.scroll-to-top.show {
+  display: block;
+}
+
+html{
+  scroll-behavior: smooth;
+
+}
 .main-content {
   flex: 1;
 }
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
- @media (prefers-reduced-motion: no-preference) { 
-  a .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} 

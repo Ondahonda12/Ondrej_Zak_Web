@@ -1,25 +1,47 @@
-
-import Header from './header.jsx'
-import Home from './Home.jsx'
-import Contacts from './Contacts.jsx'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Footer from './footer.jsx'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import Header from './header.jsx';
+import Home from './Home.jsx';
+import Footer from './footer.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 function App() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    document.getElementById('header').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Router>
       <div className="app-wrapper">
-      <Header />
-      <main className="main-content">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contacts />} />
-      </Routes>
-      </main>
-      <Footer />
+        <Header/>
+        <main className="main-content">
+          <div id="home">
+            <Home />
+          </div>
+        </main>
+        {showScrollButton && (
+          <button className="scroll-to-top" onClick={scrollToTop}>
+            ↑
+          </button>
+        )}
+        <Footer />
       </div>
     </Router>
-  )
+  );
 }
-export default App
+export default App;
