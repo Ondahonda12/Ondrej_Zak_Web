@@ -18,6 +18,9 @@ body {
 }
 .home{
   max-width: 1800px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 
