@@ -16,7 +16,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.home{
+  max-width: 1800px;
+}
 
 
 .zivotopis-section {

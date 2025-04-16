@@ -12,7 +12,6 @@ const Header = () => {
       <div>
       <a href="#home"><button className="login-button">O mně</button></a>
       <a href="#zivotopis"><button className="login-button">Životopis</button></a>
-      <a href="#repo"><button className="login-button">Moje Práce</button></a>
       <a href="#contact"><button className="login-button">Kontakty</button></a>
       </div>
     </header>
