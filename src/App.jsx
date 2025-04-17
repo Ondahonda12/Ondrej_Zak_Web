@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './header.jsx';
-import Home from './Home.jsx';
+import Body from './Body.jsx';
 import Footer from './footer.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -30,8 +30,8 @@ function App() {
       <div className="app-wrapper">
         <Header/>
         <main className="main-content">
-          <div id="home">
-            <Home />
+          <div id="body">
+            <Body />
           </div>
         </main>
         {showScrollButton && (

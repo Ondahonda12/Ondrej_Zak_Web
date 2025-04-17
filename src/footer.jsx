@@ -13,7 +13,6 @@ const Footer = () => {
         <div className="footer-left">
           <p>Webová stránka vytvořená v Reactu.</p>
           <p>Všechny práva vyhrazena &copy; {currentYear}</p>
-          <p>Vytvořeno s ❤️ v Reactu.</p>
         </div>
 
         <div className="footer-center">

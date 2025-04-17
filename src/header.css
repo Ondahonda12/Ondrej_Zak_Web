@@ -9,7 +9,7 @@ header {
   } 
 header .logo-container {
     display: flex;
-    align-items: center;
+    align-items: left;
   }
 header .logo {
     height: 3rem; 
@@ -19,11 +19,22 @@ header .logo {
   }
  header .title {
     color: crimson;
+    display: flex;
+    align-self: left;
+    text-align: left;
     vertical-align: top;
     font-size: 2rem;
     font-weight: bold;
+    
   }   
-  
+  @media screen and (max-width: 600px) {
+    header .title{
+      font-size: 0.8rem;
+      display: flex;
+
+    }
+  }
+ 
   header .login-button {
     background-color: #fcb928;
     color: rgb(0, 0, 0);
@@ -35,6 +46,20 @@ header .logo {
     cursor: pointer;
     transition: background-color 0.6s linear;
   }
-  header .login-button:hover {
-    background-color: #e26703; 
+  @media (max-width: 600px) {
+    header .login-button {
+      flex-direction : column;
+      background-color: #fcb928;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      margin-left: 0.5rem;
+      border: none;
+      border-radius: 0.5rem; 
+      cursor: pointer;
+      transition: background-color 0.6s linear;
+    }
+    header .login-button:hover {
+      background-color: #e26703; 
+    }
   }
