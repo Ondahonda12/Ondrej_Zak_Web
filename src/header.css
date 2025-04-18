@@ -17,23 +17,17 @@ header .logo {
     margin-right: 1rem;
     border-radius: 50rem;
   }
+
+
  header .title {
     color: crimson;
     display: flex;
-    align-self: left;
-    text-align: left;
+
     vertical-align: top;
     font-size: 2rem;
     font-weight: bold;
     
   }   
-  @media screen and (max-width: 600px) {
-    header .title{
-      font-size: 0.8rem;
-      display: flex;
-
-    }
-  }
  
   header .login-button {
     background-color: #fcb928;
@@ -45,6 +39,9 @@ header .logo {
     border-radius: 0.5rem; 
     cursor: pointer;
     transition: background-color 0.6s linear;
+  }
+  header .login-button:hover {
+    background-color: #e26703; 
   }
   @media (max-width: 600px) {
     header .login-button {
